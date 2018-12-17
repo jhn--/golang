@@ -5,7 +5,6 @@ import "fmt"
 // this is a comment 
 
 func main() {
-    fmt.Println(len("Hello World"))
-    fmt.Println("Hello World"[1])
-    fmt.Println("hello " + "world")
+    answer := (32132 * 42452)
+    fmt.Println(answer)
 }
