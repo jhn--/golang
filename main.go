@@ -3,9 +3,13 @@ package main
 import "fmt"
 
 // this is a comment 
+var x string = "Hello, World"
 
 func main() {
-    var x string = "hello"
-    var y string = "world"
-    fmt.Println(x == y)
+    fmt.Println(x)
+    f()
+}
+
+func f() {
+    fmt.Println(x)
 }
