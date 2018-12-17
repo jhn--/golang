@@ -5,13 +5,10 @@ import "fmt"
 // this is a comment 
 
 func main() {
-    var (
-        a = "a"
-        b = "b"
-        c = "c"
-    )
+    fmt.Print("Enter a number: ")
+    var input float64
+    fmt.Scanf("%f", &input)
 
-    fmt.Println(a)
-    fmt.Println(b)
-    fmt.Println(c)
+    output := input * 2
+    fmt.Println(output)
 }
