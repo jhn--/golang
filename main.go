@@ -3,14 +3,14 @@ package main
 import "fmt"
 
 /*
-Using the example program as a starting point, write a program that converts from Fahrenheit into Celsius. (C = (F - 32) * 5/9)
+Write another program that converts from feet into meters. (1 ft = 0.3048 m)
 */
 
 func main() {
-    fmt.Print("Enter a temperature in Fahrenheit: ")
-    var fahrenheit float64
-    fmt.Scanf("%f", &fahrenheit)
+    fmt.Print("Enter a temperature in feet: ")
+    var feet float64
+    fmt.Scanf("%f", &feet)
 
-    celsius := ((fahrenheit - 32.0) * (5.0/9.0))
-    fmt.Println(celsius)
+    meter := feet * 0.3048
+    fmt.Println(meter)
 }
