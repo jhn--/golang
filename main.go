@@ -5,6 +5,9 @@ import "fmt"
 // this is a comment 
 
 func main() {
-    answer := (true && false) || (false && true) || !(false && false)
-    fmt.Println(answer)
+    var x string
+    x = "first"
+    fmt.Println(x)
+    x = x + "second"
+    fmt.Println(x)
 }
