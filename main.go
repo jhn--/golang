@@ -5,6 +5,6 @@ import "fmt"
 // this is a comment 
 
 func main() {
-    answer := (32132 * 42452)
+    answer := (true && false) || (false && true) || !(false && false)
     fmt.Println(answer)
 }
