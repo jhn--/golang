@@ -5,9 +5,7 @@ import "fmt"
 // this is a comment 
 
 func main() {
-    var x string
-    x = "first"
-    fmt.Println(x)
-    x = x + "second"
-    fmt.Println(x)
+    var x string = "hello"
+    var y string = "world"
+    fmt.Println(x == y)
 }
