@@ -3,11 +3,19 @@ package main
 import "fmt"
 
 /*
-Write a program that prints out all the numbers evenly divisible by 3 between 1 and 100. (3, 6, 9, etc.)
+Write a program that prints the numbers from 1 to 100. But for multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".
 */
 
 func main() {
-    for count := 1; (count * 3) <= 100; count++{
-        fmt.Println(count * 3)
+    for count := 1; count <= 100; count++{
+        if ((count %3 == 0) && (count %5 == 0)) {
+            fmt.Println("FizzBuzz")
+        } else if count %3 == 0 {
+            fmt.Println("Fizz")
+        } else if count %5 == 0 {
+            fmt.Println("Buzz")
+        } else {
+            fmt.Println(count)
+        }
     }
 }
