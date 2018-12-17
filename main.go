@@ -3,14 +3,11 @@ package main
 import "fmt"
 
 /*
-Write another program that converts from feet into meters. (1 ft = 0.3048 m)
+Write a program that prints out all the numbers evenly divisible by 3 between 1 and 100. (3, 6, 9, etc.)
 */
 
 func main() {
-    fmt.Print("Enter a temperature in feet: ")
-    var feet float64
-    fmt.Scanf("%f", &feet)
-
-    meter := feet * 0.3048
-    fmt.Println(meter)
+    for count := 1; (count * 3) <= 100; count++{
+        fmt.Println(count * 3)
+    }
 }
