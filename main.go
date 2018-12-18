@@ -16,9 +16,9 @@ func main() {
 
     var total float64 = 0
 
-    for i := 0; i < len(x); i++{
+    for i, value := range x {
         total += x[i]
     }
 
-    fmt.Println(total/float64(len(x))) //len(x) and total have different types. total is a float64 while len(x) is an int.
+    fmt.Println(total/float64(len(x))) 
 }
