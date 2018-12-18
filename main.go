@@ -3,11 +3,11 @@ package main
 import "fmt"
 
 /*
-arrays
+slices
 */
 
 func main() {
-    x := [5]float64 {98, 93, 77, 82, 83}
+    // x := [5]float64 {98, 93, 77, 82, 83}
 
     /*
     x := [5]float64 {
@@ -18,11 +18,25 @@ func main() {
         83,
     }
     */
-    var total float64 = 0
 
-    for _, value := range x {
-        total += value
-    }
+    var x [10]int
+    fmt.Println(x)
 
-    fmt.Println(total/float64(len(x))) 
+    y := [10]int {1,2,3,4,5,6,7,8,9}
+    fmt.Println(y)
+
+    z := make([]float64, 5, 10)
+    fmt.Println(z)
+
+    a := y[:5]
+    fmt.Println(a)
+
+    b := y[3:8]
+    fmt.Println(b)
+
+    c := y[:3]
+    fmt.Println(c)
+
+    d := y[:]
+    fmt.Println(d)
 }
