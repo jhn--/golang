@@ -4,6 +4,8 @@ import "fmt"
 
 /*
 functions
+
+name the return type
 */
 
 func main() {
@@ -12,7 +14,7 @@ func main() {
 }
 
 
-func average(xs []float64) float64 {
+func average(xs []float64) (average float64) {
     total := 0.0
     for _, value := range xs {
         total += value
@@ -22,5 +24,6 @@ func average(xs []float64) float64 {
         total += xs[i]
     }
     */
-    return total/float64(len(xs))
+    average = total/float64(len(xs))
+    return
 }
