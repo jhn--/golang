@@ -31,5 +31,7 @@ func main() {
 }
 
 /*
+makeEvenGenerator returns a function which generates even numbers. Each time it's called it adds 2 to the local i variable which – unlike normal local variables – persists between calls.
+
 feeels like some kind of python generator
 */
