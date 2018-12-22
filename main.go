@@ -5,20 +5,25 @@ import "fmt"
 /*
 functions
 
-Returning Multiple Values
+Variadic Functions
 */
 
 func main() {
-    a, b, c, d := f()
-    fmt.Println(a, b, c, d)
+    xs := []int{1,2,3,4,5,6}
+    total_1 := add(xs...)
+    fmt.Println("total_1 from array/slice = ",total_1)
+
+    total_2 := add(10, 9, 8)
+    fmt.Println("total_2 from a bunch of ints = ",total_2)
+
+    total_3 := add()
+    fmt.Println("total_3 from zero arguments =",total_3)
 }
 
-func f() (a int, b int, c int, d int) {
-    x := 1
-    y := 1
-    a = x + y
-    b = x - y
-    c = x * y
-    d = x / y
-    return a, b, c, d
+func add(args ...int) (total int) {
+    // accepts 0 or more arguments
+    for _, value := range args {
+        total += value
+    }
+    return 
 }
