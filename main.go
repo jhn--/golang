@@ -5,25 +5,20 @@ import "fmt"
 /*
 functions
 
-name the return type
+Returning Multiple Values
 */
 
 func main() {
-    xs := []float64{98,93,77,82,83}
-    fmt.Println(average(xs))
+    a, b, c, d := f()
+    fmt.Println(a, b, c, d)
 }
 
-
-func average(xs []float64) (average float64) {
-    total := 0.0
-    for _, value := range xs {
-        total += value
-    }
-    /*
-    for i := 0; i < len(xs); i++ {
-        total += xs[i]
-    }
-    */
-    average = total/float64(len(xs))
-    return
+func f() (a int, b int, c int, d int) {
+    x := 1
+    y := 1
+    a = x + y
+    b = x - y
+    c = x * y
+    d = x / y
+    return a, b, c, d
 }
