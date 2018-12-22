@@ -6,20 +6,30 @@ import "fmt"
 functions
 
 Closure
-increment() adds 1 to the variable x which is defined in the main function's scope. This x variable _can_ be accessed and modified by the increment function. This is why the first time we call increment we see 1 displayed, but the second time we call it we see 2 displayed.
-
-A function like this together with the non-local variables it references is known as a closure. In this case increment and the variable x form the closure.
+One way to use closure is by writing a function which returns another function which – when called – can generate a sequence of numbers. For example here's how we might generate all the even numbers:
 */
 
-func main() {
-    x := 0
-    increment := func() int {
-        x++
-        return x
+func makeEvenGenerator() func() uint {
+    // returns a function and a uint...?
+    i := uint(0) // initialize new variable 
+    return func() (ret uint) { 
+    // returns a function, ... which returns am uint
+        ret = i
+        i += 2
+        return
     }
-
-    fmt.Println(increment())
-    fmt.Println(increment())
-    fmt.Println(increment())
-    fmt.Println(increment())
 }
+
+func main() {
+    nextEven := makeEvenGenerator()
+    // nextEven is a name for a function now, so nextEven is now nextEven()
+    // if you print nextEven, you'll get its memory address ie. 0x10910b0
+    fmt.Println(nextEven()) // 0
+    fmt.Println(nextEven()) // 2
+    fmt.Println(nextEven()) // 4
+    fmt.Println(nextEven()) // 6
+}
+
+/*
+feeels like some kind of python generator
+*/
