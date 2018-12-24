@@ -1,32 +1,19 @@
 package main
 
-import "fmt"
+import (
+    "fmt";
+)
 
 /*
-pointers
-
-Write a program that can swap two integers (x := 1; y := 2; swap(&x, &y) should give you x=2 and y=1).
+Structs and Interfaces
 */
 
-func swap(xPtr *int, yPtr *int) {
-    zPtr := new(int)
-    *zPtr = *xPtr
-
-    *xPtr = *yPtr
-    *yPtr = *zPtr
-}
-
 func main() {
-    x := 1
-    y := 2
-    fmt.Println("original x = ", x)
-    fmt.Println("original y = ", y)
-    swap(&x, &y)
-    fmt.Println("new x = ", x)
-    fmt.Println("new y = ", y)
-}
+    type Circle struct {
+        x, y, r float64
+    }
 
-// create a buffer pointer(zPtr)
-// assign value of xPtr to zPtr
-// assign value of yPtr to xPtr
-// assign value of zPtr to yPtr
+    c := Circle{x: 10, y: 10, r: 5}
+
+    fmt.Println(c.x, c.y, c.r)
+}
