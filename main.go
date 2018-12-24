@@ -3,19 +3,17 @@ package main
 import "fmt"
 
 /*
-functions
-
-panic & recover
+pointers
 */
 
+func zero(x int) {
+    x = 0
+}
+
 func main() {
-    // recover() happens due to defer()
-
-    defer func() {
-        str := recover()
-        fmt.Println(str)
-        fmt.Println("Recovered")
-    }() // what is this trailing () parenthesis for?
-
-    panic("PANIC")
+    // zero function will not modify the original x variable in the main function
+    x := 5
+    fmt.Println("x is ", x)
+    zero(x)
+    fmt.Println("after zero(), x is now", x)
 }
