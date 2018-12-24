@@ -4,21 +4,19 @@ import "fmt"
 
 /*
 pointers
-
-new
-new takes a type as an argument, allocates enough memory to fit a value of that type and returns a pointer to it.
 */
 
-func one(xPtr *int) {
-    // assigns the integer value of 1 to pointer.
-    *xPtr = 1
-}
-
 func main() {
-    // creates a new pointer using new() with type int and assign it to variable xPtr
-    xPtr := new(int)
-    // passes the pointer to one()
-    one(xPtr)
-    //* deferences the pointer and gives us access to the value
-    fmt.Println(*xPtr)
+    one := "1: How do you get the memory address of a variable?"
+    one_ans := "By using the & operator."
+    two := "2: How do you assign a value to a pointer?"
+    two_ans := "using the * operation, ie *xPtr = 0, means 'store the value 0 in the memory address xPtr refers to.'"   
+    three := "3: How do you create a new pointer?"
+    three_ans := "by using the new() function, new takes a type as an argument ie. new(int), and returns a pointer."
+
+    qns_ans := []string {one, one_ans, two, two_ans, three, three_ans}
+
+    for _, v := range qns_ans {
+        fmt.Println(v)
+    }
 }
